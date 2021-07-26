@@ -8,11 +8,7 @@ jobs:
       - run:
           name: yarn add dependencies
           command: | 
-            yarn add -save
-      - run: 
-          name: build app
-          command: | 
-            yarn build     
+            yarn add -save    
       - run:
           name: run app
           command: | 
