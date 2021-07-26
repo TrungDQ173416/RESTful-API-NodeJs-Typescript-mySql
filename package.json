@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon dist/server.js"
   },
   "author": "TrungDQ",
