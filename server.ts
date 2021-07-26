@@ -27,11 +27,7 @@ app.use(function(req: Request, res: Response, next) {
 
 
 //routes
-// app.use('/customers', router);
-
-app.get('/', (req, res) => {
-  res.json({ messages: 'Hello World!'})
-});
+app.use('/customers', router);
 
 // set port, listen for requests
 app.listen(process.env.PORT, () => {
