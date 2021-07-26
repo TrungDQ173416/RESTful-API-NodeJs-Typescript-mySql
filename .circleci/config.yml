@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  run_app:
+  build:
     docker:
       - image: circleci/node:10
     steps:
@@ -13,8 +13,7 @@ jobs:
           name: run app
           command: | 
             yarn dev
-
 Workflows:
   build:
     jobs:
-       - run_app
+       - build
