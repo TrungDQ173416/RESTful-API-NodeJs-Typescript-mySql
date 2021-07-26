@@ -9,6 +9,10 @@ jobs:
           name: yarn add dependencies
           command: | 
             yarn add -save
+      - run: 
+          name: build app
+          command: | 
+            yarn build     
       - run:
           name: run app
           command: | 
