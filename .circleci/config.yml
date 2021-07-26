@@ -1,7 +1,19 @@
+# This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
 version: 2.1
+
 orbs:
-  heroku: circleci/heroku@0.0.10
+  node: circleci/node@4.1
+
+jobs:
+  install-node-example:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+      - run: node --version
 workflows:
-  heroku_deploy:
+  test_my_app:
     jobs:
-      - heroku/deploy-via-git
+      - install-node-example
