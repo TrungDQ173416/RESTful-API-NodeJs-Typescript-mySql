@@ -1,4 +1,4 @@
-vesion: 2.1
+version: 2.1
 jobs:
   run_app:
     docker:
@@ -7,10 +7,12 @@ jobs:
       - checkout
       - run:
           name: yarn add dependencies
-          command: | yarn add
+          command: | 
+            yarn add
       - run:
           name: run app
-          command: | yarn dev
+          command: | 
+            yarn dev
 
 Workflows:
   build:
